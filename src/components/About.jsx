@@ -45,7 +45,7 @@ export default function About() {
                   <p className="text-sky-100 text-sm">Ibi, Alicante</p>
                   <div className="mt-6 flex items-center justify-center gap-2 text-sky-200 text-sm">
                     <MapPin className="w-4 h-4" />
-                    <span>C/ Mayor 12, Ibi 03440</span>
+                    <span>Carrer Nou d'Octubre, 10 — Ibi 03440</span>
                   </div>
                 </div>
               </div>

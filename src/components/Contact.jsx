@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react'
 import axios from 'axios'
 
 const contactInfo = [
-  { icon: MapPin, title: 'Dirección', lines: ['C/ Mayor 12, 1º', '03440 Ibi, Alicante'], color: 'sky' },
+  { icon: MapPin, title: 'Dirección', lines: ['Carrer Nou d\'Octubre, 10, 1º Izq.', '03440 Ibi, Alicante'], color: 'sky' },
   { icon: Phone, title: 'Teléfono', lines: ['965 000 000', 'WhatsApp: 600 000 000'], color: 'cyan' },
   { icon: Mail, title: 'Email', lines: ['info@novaclinica.es', 'citas@novaclinica.es'], color: 'teal' },
   { icon: Clock, title: 'Horario', lines: ['Lun – Vie: 8:00 – 20:00', 'Sábados: 9:00 – 14:00'], color: 'sky' },
@@ -104,7 +104,7 @@ export default function Contact() {
               <div className="text-center">
                 <MapPin className="w-10 h-10 text-sky-500 mx-auto mb-2" />
                 <p className="text-slate-600 font-medium text-sm">Nova Clínica</p>
-                <p className="text-slate-400 text-xs">C/ Mayor 12, Ibi, Alicante</p>
+                <p className="text-slate-400 text-xs">Carrer Nou d'Octubre, 10 — Ibi</p>
               </div>
               <div className="absolute bottom-3 right-3">
                 <a

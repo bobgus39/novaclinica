@@ -66,7 +66,7 @@ export default function Footer() {
             <div className="space-y-2.5 text-sm mb-6">
               <div className="flex items-center gap-2.5">
                 <MapPin className="w-4 h-4 text-sky-500 flex-shrink-0" />
-                <span>C/ Mayor 12, 03440 Ibi, Alicante</span>
+                <span>Carrer Nou d'Octubre, 10, 1º Izq. — 03440 Ibi</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-sky-500 flex-shrink-0" />
