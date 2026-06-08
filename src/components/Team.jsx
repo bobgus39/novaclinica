@@ -92,10 +92,10 @@ export default function Team() {
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm ring-1 ring-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+              className="bg-white rounded-2xl shadow-sm ring-1 ring-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
             >
               {/* Header gradient */}
-              <div className={`h-28 bg-gradient-to-br ${doc.gradient} relative`}>
+              <div className={`h-28 bg-gradient-to-br ${doc.gradient} relative overflow-hidden rounded-t-2xl`}>
                 <div
                   className="absolute inset-0 opacity-30"
                   style={{ backgroundImage: 'radial-gradient(circle at 30% 50%, rgba(255,255,255,0.3) 0%, transparent 60%)' }}
@@ -105,7 +105,7 @@ export default function Team() {
               {/* Content */}
               <div className="px-6 pb-6">
                 {/* Avatar con iniciales */}
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${doc.gradient} flex items-center justify-center -mt-8 shadow-lg border-2 border-white`}>
+                <div className={`relative z-10 w-16 h-16 rounded-2xl bg-gradient-to-br ${doc.gradient} flex items-center justify-center -mt-8 shadow-lg border-2 border-white`}>
                   <span className="text-white font-bold text-lg tracking-tight select-none">
                     {doc.initials}
                   </span>
