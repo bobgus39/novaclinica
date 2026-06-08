@@ -5,55 +5,55 @@ import { Mail, Star, ExternalLink } from 'lucide-react'
 const doctors = [
   {
     name: 'Dra. Laura Martínez',
+    initials: 'LM',
     specialty: 'Directora Médica · Medicina General',
     experience: '20 años',
     rating: 5.0,
-    avatar: '👩‍⚕️',
     gradient: 'from-sky-500 to-blue-600',
     bio: 'Especialista en medicina familiar e interna con amplia experiencia en atención continuada.',
   },
   {
     name: 'Dr. Carlos Sánchez',
+    initials: 'CS',
     specialty: 'Traumatología y Ortopedia',
     experience: '15 años',
     rating: 4.9,
-    avatar: '👨‍⚕️',
     gradient: 'from-cyan-500 to-teal-600',
     bio: 'Referente regional en cirugía ortopédica mínimamente invasiva y medicina deportiva.',
   },
   {
     name: 'Dra. Ana Pérez',
+    initials: 'AP',
     specialty: 'Pediatría',
     experience: '12 años',
     rating: 5.0,
-    avatar: '👩‍⚕️',
     gradient: 'from-violet-500 to-purple-600',
     bio: 'Dedicada al seguimiento del desarrollo infantil y adolescente con enfoque preventivo.',
   },
   {
     name: 'Dr. Javier López',
+    initials: 'JL',
     specialty: 'Cardiología',
     experience: '18 años',
     rating: 4.9,
-    avatar: '👨‍⚕️',
     gradient: 'from-rose-500 to-pink-600',
     bio: 'Experto en diagnóstico no invasivo y rehabilitación cardíaca en pacientes adultos.',
   },
   {
     name: 'Dra. Elena Rodríguez',
+    initials: 'ER',
     specialty: 'Neurología',
     experience: '10 años',
     rating: 4.8,
-    avatar: '👩‍⚕️',
     gradient: 'from-indigo-500 to-blue-600',
     bio: 'Especializada en trastornos neurodegenerativos y cefaleas crónicas.',
   },
   {
     name: 'Dr. Miguel Torres',
+    initials: 'MT',
     specialty: 'Oftalmología',
     experience: '14 años',
     rating: 4.9,
-    avatar: '👨‍⚕️',
     gradient: 'from-teal-500 to-emerald-600',
     bio: 'Cirujano ocular con formación en las principales clínicas europeas de referencia.',
   },
@@ -96,15 +96,19 @@ export default function Team() {
             >
               {/* Header gradient */}
               <div className={`h-28 bg-gradient-to-br ${doc.gradient} relative`}>
-                <div className="absolute inset-0 opacity-30"
+                <div
+                  className="absolute inset-0 opacity-30"
                   style={{ backgroundImage: 'radial-gradient(circle at 30% 50%, rgba(255,255,255,0.3) 0%, transparent 60%)' }}
                 />
               </div>
 
               {/* Content */}
               <div className="px-6 pb-6">
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${doc.gradient} flex items-center justify-center text-3xl -mt-8 shadow-lg border-2 border-white`}>
-                  {doc.avatar}
+                {/* Avatar con iniciales */}
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${doc.gradient} flex items-center justify-center -mt-8 shadow-lg border-2 border-white`}>
+                  <span className="text-white font-bold text-lg tracking-tight select-none">
+                    {doc.initials}
+                  </span>
                 </div>
 
                 <div className="mt-3">
@@ -120,7 +124,7 @@ export default function Team() {
                       {[...Array(5)].map((_, j) => (
                         <Star
                           key={j}
-                          className={`w-3.5 h-3.5 ${j < Math.floor(doc.rating) ? 'text-amber-400 fill-amber-400' : 'text-slate-200'}`}
+                          className={`w-3.5 h-3.5 ${j < Math.floor(doc.rating) ? 'text-amber-400 fill-amber-400' : 'text-slate-200 fill-slate-200'}`}
                         />
                       ))}
                     </div>
